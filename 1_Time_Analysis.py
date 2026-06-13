@@ -166,3 +166,5 @@ with col3:
     )
     fig_ind.update_layout(xaxis_title=None, margin=dict(l=10, r=10, t=10, b=10))
     st.plotly_chart(fig_ind, use_container_width=True)
+
+    
