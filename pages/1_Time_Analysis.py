@@ -6,7 +6,7 @@ import plotly.express as px
 st.set_page_config(page_title='Time Analysis', page_icon='📅', layout='wide')
 
 # Main Page Headers
-st.title('📅 Temporal Transaction Analytics')
+st.title('Temporal Transaction Analytics')
 st.markdown('Monitor trading velocity, chronological trends, and asset distribution profiles over custom timelines.')
 
 
@@ -85,7 +85,7 @@ custom_teal_palette = ["#008080", "#20B2AA", "#48D1CC", "#00CED1", "#00FFFF"]
 
 # Interactive Filters (Sidebar Date Range Selector)
 
-st.sidebar.header('📅 Timeline Boundaries')
+st.sidebar.header('Timeline Boundaries')
 
 min_calendar_date = master_df['date'].min().date()
 max_calendar_date = master_df['date'].max().date()
@@ -110,7 +110,7 @@ else:
 # High-Performance Interactive Plotly Visualization
 
 # Line Chart: Traded units/orders frequency over time
-st.subheader('📈 Chronological Portfolio Trading Velocity')
+st.subheader('Chronological Portfolio Trading Velocity')
 # FIXED: Unified spelling error on 'Transaction Frequency' column link keys
 timeline_data = filtered_df.groupby('date').size().reset_index(name='Transaction Frequency')
 
@@ -128,7 +128,7 @@ st.markdown('---')
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown('### 🥇 Top 3 Traded Symbols')
+    st.markdown('### Top 3 Traded Symbols')
     # I'm grouping and aggregating top assets
     top_3_symbols = filtered_df.groupby('symbol').size().reset_index(name='Orders') \
                                .sort_values(by='Orders', ascending=False).head(3)
@@ -142,7 +142,7 @@ with col1:
     st.plotly_chart(fig_sym, use_container_width=True)
 
 with col2:
-    st.markdown('### 🏢 Top 5 Corporate Sectors')
+    st.markdown('### Top 5 Corporate Sectors')
     # I'm grouping and aggregating top market sectors
     top_5_sectors = filtered_df.groupby('sector').size().reset_index(name='Orders') \
                                .sort_values(by='Orders', ascending=False).head(5)
@@ -155,7 +155,7 @@ with col2:
     st.plotly_chart(fig_sec, use_container_width=True)
 
 with col3:
-    st.markdown("### 🏭 Top 5 Industry Niches")
+    st.markdown("### Top 5 Industry Niches")
     # Group and aggregate precise industries
     top_5_industries = filtered_df.groupby('industry').size().reset_index(name='Orders') \
                                  .sort_values(by='Orders', ascending=False).head(5)

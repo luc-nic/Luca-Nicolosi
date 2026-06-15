@@ -6,7 +6,7 @@ import plotly.express as px
 st.set_page_config(page_title="Country Analysis", page_icon="🌍", layout="wide")
 
 # Main Page Headers
-st.title("🌍 Geographic Market Analytics")
+st.title("Geographic Market Analytics")
 st.markdown("Deep-dive into specific global markets to analyze asset concentration and trade distributions.")
 
 # Data Loading 
@@ -80,7 +80,7 @@ if filtered_country_df.empty:
     st.warning(f'⚠️ No portfolio transaction ledger entries found for {selected_country} during the calendar year 2024.')
 else:
     # Line Chart representing the trend of total transaction (BUY + SELL) during 2024
-    st.markdown('### 📈 Chronological Transaction Trend (BUY + SELL) inside 2024')
+    st.markdown('### Chronological Transaction Trend (BUY + SELL) inside 2024')
     trend_data = filtered_country_df.groupby('date').size().reset_index(name='Total Transactions')
 
     fig_trend = px.line(trend_data, x='date', y='Total Transactions', template='plotly_white', color_discrete_sequence=[custom_teal_palette[0]])

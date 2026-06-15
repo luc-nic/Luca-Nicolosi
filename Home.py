@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title= 'Financial Transaction Analytics Dashboard', page_icon= '📊', layout= 'wide') 
 
 # I'm setting the main title and subtitle
-st.title('📊 Financial Transactions Portfolio Dashboard')
+st.title('Financial Transactions Portfolio Dashboard')
 st.subheader('Enterprise Business Intelligence System')
 
 st.markdown('---')
@@ -22,8 +22,8 @@ statement logs into clean, aggregate-ready business insights.
 # Key Features Callout Box
 st.info("""
 **Navigate through the system using the sidebar on the left:**
-* 📅 **Time Analysis:** Track trading velocity, transaction trends, and dominant macro sectors across different timelines and custom date ranges.
-* 🌍 **Country Analysis:** Deep-dive into specific geographic markets to investigate asset concentration, specific localized industry trends, and trade buy/sell distributions.
+* **Time Analysis:** Track trading velocity, transaction trends, and dominant macro sectors across different timelines and custom date ranges.
+* **Country Analysis:** Deep-dive into specific geographic markets to investigate asset concentration, specific localized industry trends, and trade buy/sell distributions.
 """)
 
 # Dashboard Metrics Summary Placeholder
