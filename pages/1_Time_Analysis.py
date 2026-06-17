@@ -15,9 +15,9 @@ st.markdown('Monitor trading velocity, chronological trends, and asset distribut
 @st.cache_data
 def load_and_process_data():
     # Load raw datasets
-    symbols_df = pd.read_csv('symbols.csv', sep=';')
-    statement_df = pd.read_csv('account-statement-1-1-2024-12-31-2024.csv', sep=';')
-    country_df = pd.read_csv('country.csv')
+    symbols_df = pd.read_csv('Luca_Nicolosi_Homework_3/symbols.csv', sep=';')
+    statement_df = pd.read_csv('Luca_Nicolosi_Homework_3/account-statement-1-1-2024-12-31-2024.csv', sep=';')
+    country_df = pd.read_csv('Luca_Nicolosi_Homework_3/country.csv')
 
     # I'm renaming statement and geographic headers to prevent casing and mismatch KeyError exceptions
     statement_df = statement_df.rename(columns={'Date': 'date', 'Symbol': 'symbol', 'TransactionType': 'transaction_type', 'Unit': 'quantity'})
