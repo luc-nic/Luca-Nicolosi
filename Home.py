@@ -23,7 +23,6 @@ statement logs into clean, aggregate-ready business insights.
 st.info("""
 **Navigate through the system using the sidebar on the left:**
 * **Time Analysis:** Track trading velocity, transaction trends, and dominant macro sectors across different timelines and custom date ranges.
-* **Country Analysis:** Deep-dive into specific geographic markets to investigate asset concentration, specific localized industry trends, and trade buy/sell distributions.
 """)
 
 # Dashboard Metrics Summary Placeholder
